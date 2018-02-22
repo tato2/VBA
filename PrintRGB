@@ -1,0 +1,18 @@
+Sub PrintRGB()
+
+    Dim color As Long
+    Dim r As Integer
+    Dim g As Integer
+    Dim b As Integer
+    
+    color = ActiveCell.Interior.color
+
+    r = color Mod 256
+    g = CInt(color / 256) Mod 256
+    b = CInt(color / 256 / 256)
+
+    Debug.Print "R:" & r
+    Debug.Print "G:" & g
+    Debug.Print "B:" & b
+
+End Sub
